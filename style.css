@@ -19,9 +19,11 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
-img {
+.img img {
   border-radius: 100%;
-  width: 100px;
+  width: 150px;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .blur {
@@ -32,26 +34,47 @@ img {
 .img {
   display: grid;
   place-items: center;
-  margin: 20px;
+  margin: 40px;
+}
+h1 {
+  margin: auto;
 }
 
-.img img {
-  grid-column: 1;
-  grid-row: 1;
+#items {
+  display: grid;
+  place-items: center;
 }
-
-.item {
-  border: 5px solid pink;
-  border-radius: 10px;
-  background-color: #ffffff55;
-  margin: 30px;
-  display: flex;
-  font-size: 10px;
-}
-
-
 a {
+  width: 500px;
+  margin: 10px;
   text-decoration: none;
   color: black;
   user-select: none;
+  height: 10vh;
+}
+.item {
+  border: 5px solid pink;
+  border-radius: 10px;
+  background-color: rgba(255, 192, 203, 0.4);
+  display: flex;
+  font-size: 10px;
+  width: 97%;
+  height: 100%;
+  transition-duration: 0.5s;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  background-color: rgba(243, 199, 206, 0.7);
+}
+@media only screen and (max-width: 560px) {
+  a {
+    width: 100%;
+  }
+}
+
+.item img {
+  height: 80%;
+  aspect-ratio: 1 / 1;
+  margin: 10px;
 }
